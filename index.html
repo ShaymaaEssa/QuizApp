@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+
+    <!-- animate-library  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- google-fonts  -->
+
+    <!-- font-awesome  -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- style  -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mediaQuery.css">
+</head>
+
+<body>
+    <section class="vh-100 ">
+        <div class="overlay d-flex  justify-content-center align-items-center">
+            <div class="container d-flex flex-column row-gap-5 justify-content-center align-items-center">
+                <div class="title  animate__animated animate__slideInDown position-relative p-1 rounded-3">
+                    <div class="title-text bg-light py-3 px-5 rounded-3">
+                        <h1 class="text-capitalize">Quiz App</h1>
+                    </div>
+
+
+                    <div class="title-color position-absolute rounded-3">
+
+                    </div>
+                </div>
+
+
+
+                <!-- Quiz setting form  -->
+                <form id="questions-form" class="form w-100 ">
+                    <div class="options-menu row row-gap-4 w-100 animate__animated animate__slideInLeft">
+                        <div class="col-md-12">
+                            <div class="form-floating">
+                                <select class="form-select" id="category-select"
+                                    aria-label="Floating label select example">
+                                    <option selected>Any Category</option>
+                                </select>
+                                <label for="floatingSelect">Choose Category</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-floating">
+                                <select class="form-select" id="difficulty" aria-label="Floating label select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="easy">Easy</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="hard">Hard</option>
+                                </select>
+                                <label for="floatingSelect">Choose Difficulty Level</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="questions-num" placeholder="">
+                                <label for="floatingInput">Questions Number</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <button class="btn btn-primary w-100" type="submit" id="submit">Submit</button>
+                        </div>
+
+
+
+
+                    </div>
+
+                    </form>
+
+                    <!-- Questions -->
+                    <div class="questions row d-none">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                <div class="inner d-flex justify-content-around">
+                                    <span class="category">
+                                        Animal
+                                    </span>
+
+                                    <span class="questions-order">
+                                        1 of 3
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Special title treatment questions ?</h5>
+                                <div class="choices pt-3">
+                                    <div class="row g-3">
+                                        <div class="col-lg-6">
+                                            <button  class="btn btn-outline-primary">Go somewhere</button>
+                                        </div>
+    
+                                        <div class="col-lg-6">
+                                            <button  class="btn btn-outline-primary w-100">Go somewhere</button>
+                                        </div>
+    
+                                        <div class="col-lg-6">
+                                            <button  class="btn btn-outline-primary">Go somewhere</button>
+                                        </div>
+    
+                                        <div class="col-lg-6">
+                                            <button  class="btn btn-outline-primary">Go somewhere</button>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                
+                            </div>
+                            <div class="card-footer text-body-secondary">
+                                <span class="fs-3 text-dark">Score: <span class="score">0</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="score-display w-75 d-none">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                <div class="inner d-flex justify-content-around">
+                                    <span class="category">
+                                        Animal
+                                    </span>
+
+                                    <span class="difficulty">
+                                        Hard 
+                                    </span> 
+                                     
+                                </div>
+                            </div>
+                            <div class="card-body">
+                               <div class="icon">
+                                <i class="fa-solid fa-trophy text-success"></i>
+                               </div>
+                              <h5 class="card-title">Congratulation, you finished the Quiz !</h5>
+                              <p class="card-text fs-4">Score = <span class="score fw-bolder">3</span></p>
+                              <p>from <span class="questions-order fw-bold">3</span> Questions</p>
+                              <button  class="btn btn-primary">Re - Quiz</button>
+                            </div>
+                            <div class="card-footer text-body-secondary">
+                              10 of Jan 2025
+                            </div>
+                          </div>
+                    </div>
+
+            
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+        </div>
+
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/index.js"></script>
+</body>
+
+</html>
